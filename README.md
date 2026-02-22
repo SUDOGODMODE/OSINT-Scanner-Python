@@ -1,6 +1,5 @@
 # User Scanner
 
-![User Scanner Logo](https://github.com/user-attachments/assets/49ec8d24-665b-4115-8525-01a8d0ca2ef4)
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.3.1-blueviolet?style=for-the-badge&logo=github" />
   <img src="https://img.shields.io/github/issues/kaifcodec/user-scanner?style=for-the-badge&logo=github" />
@@ -153,17 +152,7 @@ user-scanner -u johndoe -P proxies.txt --validate-proxies # recommended
 This will:
 1. Filter out non-working proxies
 2. Save working proxies to `validated_proxies.txt`
-3. Use only validated proxies for scanning
-
-
----
-
-
-## ❤️ Support the project
-
-If this project helps you, consider supporting its development:
-
-**BTC (SegWit):** `bc1q0dzkuav8lq9lwu7gc457vwlda4utfcr5hpv7ka`
+3. Use only validated 
 
 
 ---
