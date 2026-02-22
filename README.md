@@ -12,17 +12,17 @@
 
 ---
 
-A powerful *Email OSINT tool* that checks if a specific email is registered on various sites, combined with *username scanning* for branding or OSINT — 2-in-1 tool.  
+A powerful *Email OSINT tool* that checks if a specific email is registered on various sites, combined with *username scanning* for OSINT or branding — 2-in-1 tool.  
 
-Perfect for fast, accurate and lightweight email OSINT
+Perfect for fast, accurate username and email OSINT
 
-Perfect for finding a **unique username** across GitHub, Twitter, Reddit, Instagram, and more, all in a single command.  
+Also perfect for finding a **unique username** across GitHub, Twitter, Reddit, Instagram, and more, all in a single command.  
 
 ## Features
 
 - ✅ Email & username OSINT: check email registrations and username availability across social, developer, creator, and other platforms  
 - ✅ Dual-mode usage: works as an email scanner, username scanner, or username-only tool  
-- ✅ Clear results: `Registered` / `Not Registered` for emails and `Available` / `Taken` / `Error` for usernames with precise failure reasons  
+- ✅ Clear results: `Registered` / `Not Registered` for emails and `Not Found` / `Found` / `Error` for usernames with precise failure reasons  
 - ✅ Fully modular architecture for easy addition of new platform modules  
 - ✅ Bulk scanning support for usernames and emails via input files  
 - ✅ Wildcard-based username permutations with automatic variation generation  
@@ -65,8 +65,8 @@ See [Important flags](docs/FLAGS.md) here and use the tool powerfully
 Scan a single email or username across **all** available modules/platforms:
 
 ```bash
-user-scanner -e john_doe@gmail.com   # single email scanning 
-user-scanner -u john_doe             # single username scanning 
+user-scanner -e johndoe@gmail.com   # single email scanning 
+user-scanner -u johndoe             # single username scanning 
 ```
 ### Verbose mode 
 
@@ -89,8 +89,8 @@ Output:
 Scan only specific categories or single modules:
 
 ```bash
-user-scanner -u john_doe -c dev                # developer platforms only
-user-scanner -e john_doe@gmail.com -m github   # only GitHub
+user-scanner -u johndoe -c dev                # developer platforms only
+user-scanner -e johndoe@gmail.com -m github   # only GitHub
 ```
 
 ### Bulk email/username scanning
@@ -147,7 +147,7 @@ Output:
 Validate proxies before scanning (tests each proxy against google.com):
 
 ```bash
-user-scanner -u john_doe -P proxies.txt --validate-proxies # recommended
+user-scanner -u johndoe -P proxies.txt --validate-proxies # recommended
 ```
 
 This will:
@@ -155,19 +155,6 @@ This will:
 2. Save working proxies to `validated_proxies.txt`
 3. Use only validated proxies for scanning
 
-
----
-
-## Screenshots: 
-
-- Note*: New modules are constantly getting added so screenshots might show only limited, outdated output:
-
-<img width="1080" height="930" alt="1000146237" src="https://github.com/user-attachments/assets/3cbcecaf-3620-49be-9d0a-8f94790acdf0" />
-
----
-
-
-<img width="1072" height="848" alt="user-scanner's main usage screenshot" src="https://github.com/user-attachments/assets/34e44ca6-e314-419e-9035-d951b493b47f" />
 
 ---
 
@@ -189,7 +176,7 @@ user_scanner/
 ├── email_scan/       # Currently in development
 │   ├── social/       # Social email scan modules (Instagram, Mastodon, X, etc.)
 |   ├── adult/        # Adult sites 
-|    ...               # New sites to be added soon
+|    ...
 ├── user_scan/
 │   ├── dev/          # Developer platforms (GitHub, GitLab, npm, etc.)
 │   ├── social/       # Social platforms (Twitter/X, Reddit, Instagram, Discord, etc.)
@@ -234,4 +221,3 @@ Some sites may return **403 Forbidden** or **connection timeout** errors, especi
 - Then run the tool again.
 
 These issues are caused by regional or network restrictions, not by the tool itself. If it still fails, report the error by opening an issue.
-
