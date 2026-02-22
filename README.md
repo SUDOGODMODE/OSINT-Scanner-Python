@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Tested%20on-Termux-black?style=for-the-badge&logo=termux" />
   <img src="https://img.shields.io/badge/Tested%20on-Windows-cyan?style=for-the-badge&logo=Windows" />
   <img src="https://img.shields.io/badge/Tested%20on-Linux-black?style=for-the-badge&logo=Linux" />
-  <img src="https://img.shields.io/pypi/dm/user-scanner?style=for-the-badge" />
 </p>
 
 ---
